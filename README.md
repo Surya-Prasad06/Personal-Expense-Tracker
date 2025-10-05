@@ -57,7 +57,7 @@ Optional: add an npm script for convenience. In `package.json` you can add:
 ```json
 "scripts": {
 	"dev": "vite",
-	"mock:server": "json-server --watch db.json --port 3001"
+	"mock:server": "json-server --watch db.json --port 5000"
 }
 ```
 
