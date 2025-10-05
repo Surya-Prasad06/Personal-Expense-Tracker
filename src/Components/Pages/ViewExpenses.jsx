@@ -67,16 +67,19 @@ const ViewExpenses = () => {
           {expenses.map((expense) => (
             <div className="div" key={expense.id}>
               <ul className="ul">
-                <li className="li"> {expense.note}</li>
+                <li className="li">  <strong>Title: </strong>{expense.title}</li>
+                <li className="li">  <strong>Category: </strong>{expense.category}</li>
+
+                <li className="li">  <strong>Note: </strong>{expense.note}</li>
                 <li className="li">
                   {" "}
-                  <i className="fas fa-rupee" style={{ fontSize: "15px" }}>
+                  <strong>Amount: </strong> <i className="fas fa-rupee" style={{ fontSize: "15px" }}>
                     :
                   </i>
                   {expense.amount}/-
                 </li>
-                <li className="li"> {expense.paymentmethod}</li>
-                <li className="li"> {expense.date}</li>
+                <li className="li"> <strong>Payment Method: </strong> {expense.paymentmethod}</li>
+                <li className="li">  <strong>Date: </strong>{expense.date}</li>
               </ul>
 
               <Link className="Link" to={`/updateexpense/${expense.id}`}>

@@ -10,7 +10,8 @@ const Updateexpense = () => {
   const [note, setNote] = useState("");
   const [paymentmethod, setPaymentmethod] = useState("");
   const nav = useNavigate();
-
+  const [category, setCategory] = useState("");
+  const [title, setTitle] = useState("")
   useEffect(() => {
     axios
       .get(`http://localhost:5000/expenses/${id}`)
@@ -22,6 +23,8 @@ const Updateexpense = () => {
         setDate(res.date);
         setNote(res.note);
         setPaymentmethod(res.paymentmethod);
+        setTitle(res.title);
+        setCategory(res.category)
       })
       .catch((error) => {
         console.error(error);
@@ -36,6 +39,7 @@ const Updateexpense = () => {
         date,
         note,
         paymentmethod,
+        title,category
       })
       .then((response) => {
         console.log(response.data);
@@ -49,6 +53,17 @@ const Updateexpense = () => {
   return (
     <>
       <form className="form" onSubmit={updateexpensesubmit}>
+        
+        <label htmlFor="amount">Title</label>
+        <input
+          required
+          type="text"
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter amount (e.g. 500)"
+        />
+
         <label htmlFor="amount">Amount</label>
         <input
           required
@@ -59,8 +74,19 @@ const Updateexpense = () => {
           placeholder="Enter amount (e.g. 500)"
         />
 
+        <label htmlFor="date">
+          Category 
+        </label>
+        <input
+          required
+          type="text"
+          id="text"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        />
+
         <label className="label" htmlFor="date">
-          Date <small className="small">*</small>
+          Date 
         </label>
         <input
           required
@@ -82,7 +108,7 @@ const Updateexpense = () => {
         />
 
         <label htmlFor="paymentmethod">
-          Payment Method<small className="small">*</small>
+          Payment Method
         </label>
         <input
           required

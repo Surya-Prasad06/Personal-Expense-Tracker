@@ -6,7 +6,9 @@ const Addexpenses = () => {
   const [amount, setAmount] = useState();
   const [date, setDate] = useState("");
   const [note, setNote] = useState("");
+  const [category, setCategory] = useState("")
   const [paymentmethod, setPaymentmethod] = useState("");
+const [title, setTitle] = useState("")
   const nav = useNavigate();
   const expensesubmit = (e) => {
     e.preventDefault();
@@ -15,7 +17,7 @@ const Addexpenses = () => {
         amount,
         date,
         note,
-        paymentmethod,
+        paymentmethod,category, title
       })
       .then((response) => {
         console.log(response.data);
@@ -28,21 +30,42 @@ const Addexpenses = () => {
   return (
     <div className="expense-form-container">
       <h1>
-        Add Expenses<small>*</small>
+        Add Expenses
       </h1>
       <form onSubmit={expensesubmit}>
+         <label htmlFor="amount">Title</label>
+        <input
+          required
+           type="text"
+          id="amount"
+         
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter amount (e.g. 500)"
+        />
         <label htmlFor="amount">Amount</label>
         <input
           required
-          type="number"
+           type="number"
           id="amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          placeholder="Enter amount (e.g. 500)"
+          placeholder="Enter the : Lunch,Shopping"
+        />
+         <label htmlFor="date">
+          Category 
+        </label>
+        <input
+          required
+          type="text"
+          id="text"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          placeholder="food, clothing, EMI"
         />
 
         <label htmlFor="date">
-          Date <small>*</small>
+          Date 
         </label>
         <input
           required
@@ -64,7 +87,7 @@ const Addexpenses = () => {
         />
 
         <label htmlFor="paymentmethod">
-          Payment Method<small>*</small>
+          Payment Method
         </label>
         <input
           required

@@ -1,18 +1,49 @@
 {
   "expenses": [
     {
-      "amount": "2000",
-      "date": "2025-10-05T11:36",
-      "note": "lunch with friends",
-      "paymentmethod": "online(upi)",
-      "id": "ef98"
+      "id": "f9c2",
+      "amount": "5000",
+      "date": "2025-10-01T12:25",
+      "note": "Lunch with friends at local cafe",
+      "paymentmethod": "Credit Card",
+      "category": "food",
+      "title": "Lunch"
     },
     {
-      "id": "6fa9",
-      "amount": "500",
-      "date": "2025-10-06T12:08",
-      "note": "gift for friend",
-      "paymentmethod": "card"
+      "id": "a1b4",
+      "amount": "1200",
+      "date": "2025-09-30T09:10",
+      "note": "Uber ride to work",
+      "paymentmethod": "UPI",
+      "category": "transport",
+      "title": "Commute"
+    },
+    {
+      "id": "d3e7",
+      "amount": "3500",
+      "date": "2025-09-28T18:45",
+      "note": "Grocery shopping for the week",
+      "paymentmethod": "Debit Card",
+      "category": "groceries",
+      "title": "Groceries"
+    },
+    {
+      "amount": "2000",
+      "date": "2025-09-25T21:15",
+      "note": "Netflix monthly subscription",
+      "paymentmethod": "Debit card",
+      "title": "Netflix",
+      "category": "entertainment",
+      "id": "h8k9"
+    },
+    {
+      "id": "t4m6",
+      "amount": "2500",
+      "date": "2025-09-20T14:00",
+      "note": "Dinner at Italian restaurant",
+      "paymentmethod": "Cash",
+      "category": "food",
+      "title": "Dinner"
     }
   ]
 }
