@@ -89,7 +89,7 @@ Use `axios` or `fetch` in the React app to call these endpoints. The app already
 ## Development tips
 
 - Run the Vite dev server and `json-server` concurrently in separate terminals.
-- If ports conflict, change the ports (Vite defaults to 5173, json-server in examples above uses 3001).
+- If ports conflict, change the ports (Vite defaults to 5173, json-server in examples above uses 5000).
 - When changing `db.json` while `json-server` is running, the server will automatically pick up changes.
 
 ## Build for production
