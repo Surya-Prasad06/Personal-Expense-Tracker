@@ -1,0 +1,18 @@
+{
+  "expenses": [
+    {
+      "amount": "2000",
+      "date": "2025-10-05T11:36",
+      "note": "lunch with friends",
+      "paymentmethod": "online(upi)",
+      "id": "ef98"
+    },
+    {
+      "id": "6fa9",
+      "amount": "500",
+      "date": "2025-10-06T12:08",
+      "note": "gift for friend",
+      "paymentmethod": "card"
+    }
+  ]
+}
